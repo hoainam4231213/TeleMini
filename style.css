@@ -1,16 +1,18 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
+    /* height: 100%;
+    width: 100%; */
+    color: rgba(0, 0, 0, 0.87);
+    background-color: #000000;
     overflow: hidden; /* Prevents the body scrollbar */
 }
 
 #app {
     padding: 0;
     margin: 0; /* This will also reset any extra margin */
-    width: 100%;
-    height: 100vh; /* Ensures the app takes full viewport height */
+    /* width: 100%;
+    height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
