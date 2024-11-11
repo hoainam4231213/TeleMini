@@ -16,8 +16,33 @@
     </div>
     <script type="module" src="./bundle.min.js"></script>
     <script>
+
         window.Telegram.WebApp.expand();
         window.Telegram.WebApp.disableVerticalSwipes()
+        document.body.style.overflow = 'hidden';
+        
+        var canvas = document.querySelector("canvas");
+        function resizeCanvas() {
+            var aspectRatio = 9 / 16;
+
+            var windowWidth = window.innerWidth;
+            var windowHeight = window.innerHeight;
+
+            var windowAspectRatio = windowWidth / windowHeight;
+
+            if (windowAspectRatio > aspectRatio) {
+                canvas.style.width = window.innerHeight * aspectRatio + "px";
+                canvas.style.height = window.innerHeight + "px";
+            } else {
+                canvas.style.width = window.innerWidth + "px";
+                canvas.style.height = window.innerWidth / aspectRatio + "px";
+            }
+        }
+
+        // Gọi hàm resizeCanvas khi trang được tải và khi cửa sổ thay đổi kích thước
+        window.addEventListener('resize', resizeCanvas);
+        window.addEventListener('load', resizeCanvas);
+
     </script>
 </body>
 
