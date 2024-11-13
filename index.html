@@ -20,7 +20,12 @@
         window.Telegram.WebApp.expand();
         window.Telegram.WebApp.disableVerticalSwipes()
         document.body.style.overflow = 'hidden';
-        
+        document.body.style.justifyContent = 'center';
+        document.body.style.alignItems = 'center';
+        document.body.style.height = '100vh';
+        document.body.style.overflow = 'hidden';
+        document.body.style.margin = '0';
+
         var canvas = document.querySelector("canvas");
         function resizeCanvas() {
             var aspectRatio = 9 / 16;
